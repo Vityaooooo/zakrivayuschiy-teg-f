@@ -21,7 +21,8 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+dialog {
   margin: 0;
   padding: 0;
 }
@@ -35,11 +36,34 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  background-color: inherit;
 }
+
+button {
+  border: none;;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:focus {
+  outline: none;
+}
+
 
 ul,
 ol {
   list-style: none;
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .visually-hidden {
