@@ -29,7 +29,6 @@
 
 .section__features {
   --inline-size: clamp(23.4375rem, 16.2526rem + 30.5738vw, 43.75rem);
-  /* --inline-size: 49%; */
   inline-size: var(--inline-size);
   margin: 0 auto;
 }
@@ -168,7 +167,6 @@
 .card__eighth-image {
   filter: hue-rotate(90deg) contrast(60%) blur(2px);
 }
-
 
 .card__label {
   position: absolute;
