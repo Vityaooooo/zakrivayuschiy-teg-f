@@ -54,11 +54,11 @@
   text-align: center;
 }
 
-.header__title{
+.header__title {
   font-size: clamp(3.0625rem, 2.7088rem + 1.5052vw, 4.0625rem);
 }
 
-.header__subtitle{
+.header__subtitle {
   font-size: clamp(0.875rem, 0.676rem + 0.8467vw, 1.4375rem);
 }
 
@@ -132,14 +132,43 @@
 .image-wrapper {
   position: relative;
   inline-size: 100%;
+  border-block: 2px solid currentColor;
 }
 
 .card__image {
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center right;
-  border-block: 2px solid currentColor;
 }
+
+.card__second-image {
+  filter: grayscale(.8);
+}
+
+.card__third-image {
+  filter: saturate(280%);
+}
+
+.card__fourth-image {
+  filter: hue-rotate(20deg);
+}
+
+.card__fifth-image {
+  filter: invert(70%);
+}
+
+.card__sixth-image {
+  filter: sepia(100%);
+}
+
+.card__seventh-image {
+  filter: blur(5px);
+}
+
+.card__eighth-image {
+  filter: hue-rotate(90deg) contrast(60%) blur(2px);
+}
+
 
 .card__label {
   position: absolute;
@@ -148,7 +177,7 @@
   /* text-transform: uppercase; */
   mix-blend-mode: hard-light;
   inset-inline-end: 25px;
-  inset-block-start: 25px;
+  inset-block-start: 27px;
   filter: opacity(50%);
   text-shadow:
               -1px 0 var(--text-stroke-color), 
