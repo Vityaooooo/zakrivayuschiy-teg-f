@@ -82,7 +82,7 @@
 
 .theme-menu__button:disabled {
   position: relative;
-  filter: opacity(60%);
+  opacity: .6;
 }
 
 .theme-menu__button:disabled::before {
@@ -176,7 +176,7 @@
   mix-blend-mode: hard-light;
   inset-inline-end: 25px;
   inset-block-start: 27px;
-  filter: opacity(50%);
+  opacity: .5;
   text-shadow:
               -1px 0 var(--text-stroke-color), 
               0 1px var(--text-stroke-color), 
@@ -208,13 +208,13 @@
   justify-content: end;
 }
 
-.card__icon-button:has(.like-icon) {
+.card__icon-button {
   position: relative;
   display: flex;
   padding-block-start: 2px;
 }
 
-.card__icon-button:has(.like-icon)::before {
+.card__icon-button::before {
   content: '';
   inset: 0 0;
   position: absolute;
@@ -226,12 +226,11 @@
   transition: opacity .3s ease;
 }
 
-.card__icon-button:has(.like-icon):focus-visible::before {
+.card__icon-button:focus-visible::before {
   opacity: 1;
 }
 
 .like-icon {
-  align-self: center;
   inline-size: 40px;
   block-size: 36px;
 }
