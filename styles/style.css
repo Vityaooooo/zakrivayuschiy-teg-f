@@ -20,11 +20,12 @@
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
   font-variation-settings: 'wght' var(--regular-font-weight, 400);
-  background-color: var(--background-color, #fff);
   color: var(--accent-color, #000);
-  background-image: var(--background-image, #d3d3d3);
+  /* background-image: var(--background-image);
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  background-color: var(--background-color, #fff); */
+  background: var(--background-image, #fff) no-repeat fixed center/cover;
 }
 
 .section__features {
@@ -61,16 +62,16 @@
   font-size: clamp(0.875rem, 0.676rem + 0.8467vw, 1.4375rem);
 }
 
-.theme-menu__list {
-  display: grid;
-  gap: 12px;
-  justify-content: center;
-}
-
 .header__theme-menu {
   font-size: 14px;
   background-color: transparent;
   padding-inline-start: 18px;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
 }
 
 .theme-menu__button {
@@ -140,6 +141,30 @@
   object-position: center right;
 }
 
+.card__label {
+  position: absolute;
+  font-family: var(--accent-font, fantasy);
+  font-size: 14px;
+  /* text-transform: uppercase; */
+  mix-blend-mode: hard-light;
+  inset-inline-end: 25px;
+  inset-block-start: 27px;
+  opacity: .5;
+  text-shadow:
+              -1px 0 var(--text-stroke-color, #fff), 
+              0 1px var(--text-stroke-color, #fff), 
+              1px 0 var(--text-stroke-color, #fff), 
+              0 -1px var(--text-stroke-color, #fff);
+}
+
+@supports((text-stroke: 1px var(--text-stroke-color, #fff)) or (-webkit-text-stroke: 1px var(--text-stroke-color, #fff))) {
+  .card__label {
+      -webkit-text-stroke: 1px var(--text-stroke-color, #fff);
+      text-stroke: 1px var(--text-stroke-color, #fff);
+      text-shadow: none;
+  }
+} 
+
 .card__second-image {
   filter: grayscale(.8);
 }
@@ -167,30 +192,6 @@
 .card__eighth-image {
   filter: hue-rotate(90deg) contrast(60%) blur(2px);
 }
-
-.card__label {
-  position: absolute;
-  font-family: var(--accent-font, fantasy);
-  font-size: 14px;
-  /* text-transform: uppercase; */
-  mix-blend-mode: hard-light;
-  inset-inline-end: 25px;
-  inset-block-start: 27px;
-  opacity: .5;
-  text-shadow:
-              -1px 0 var(--text-stroke-color, #fff), 
-              0 1px var(--text-stroke-color, #fff), 
-              1px 0 var(--text-stroke-color, #fff), 
-              0 -1px var(--text-stroke-color, #fff);
-}
-
-@supports((text-stroke: 1px var(--text-stroke-color, #fff)) or (-webkit-text-stroke: 1px var(--text-stroke-color, #fff))) {
-  .card__label {
-      -webkit-text-stroke: 1px var(--text-stroke-color, #fff);
-      text-stroke: 1px var(--text-stroke-color, #fff);
-      text-shadow: none;
-  }
-} 
 
 .card__text-wrapper {
   display: grid;
@@ -240,6 +241,15 @@
   animation: heart-scale .3s ease-in .1s;
 }
 
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--svg-main-color, #FF0000);
+  transition: fill 0.3s linear .06s;
+}
+
 .main-body {
   fill: transparent;
   transition: fill 0.3s linear;
@@ -280,15 +290,6 @@
   transition: fill 0.3s linear;
 }
 
-.contour {
-  transition: fill 0.1s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--svg-main-color, #FF0000);
-  transition: fill 0.3s linear .06s;
-}
-
 .sparks {
   opacity: 0;
 }
@@ -299,7 +300,8 @@
 
 .card__like-button {
   justify-self: end;
-  padding: 12px 35px 10px;
+  inline-size: 130px;
+  padding-block: 12px 10px;
 }
 
 .button {
@@ -308,6 +310,7 @@
   font-family: var(--accent-font, fantasy);
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 14px;
   line-height: .9;
   box-shadow: none;
@@ -372,10 +375,20 @@
   inline-size: 357px;
 }
 
+.dialog[open]::backdrop {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, .75);
+}
+
 .dialog__content {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.dialog__content .floppy-icon {
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .dialog__title {
@@ -383,11 +396,6 @@
   max-inline-size: 198px;
   text-transform: uppercase;
   line-height: 1.5;
-}
-
-.dialog__content .floppy-icon {
-  inline-size: 39px;
-  block-size: 39px;
 }
 
 .dialog__button {
@@ -398,11 +406,6 @@
 
 .dialog__button .button__text {
   text-transform: uppercase;
-}
-
-.dialog::backdrop {
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, .75);
 }
 
 @media (width <= 375px) {

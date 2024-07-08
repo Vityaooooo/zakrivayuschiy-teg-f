@@ -6,45 +6,45 @@
 */
 
 :root.theme-dark {
-    --bold-font-weight: 785;
-    --regular-font-weight: 465;
-    --background-color: #000;
-    --accent-color: #00CC14;
-    --text-stroke-color: #000;
-    --button-text-color: #00CC14;
-    --svg-contour-color: #00CC14;
-    --background-image: 
-        repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
-        repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
-        repeating-linear-gradient(to bottom, #007f0c, #004306);
+  --bold-font-weight: 785;
+  --regular-font-weight: 465;
+  --background-color: #000;
+  --accent-color: #00CC14;
+  --text-stroke-color: #000;
+  --button-text-color: #00CC14;
+  --svg-contour-color: #00CC14;
+  --background-image: 
+      repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #007f0c, #004306);
 }
 
 :root.theme-light {
-    --bold-font-weight: 700;
-    --regular-font-weight: 400;
-    --background-color: #fff;
-    --accent-color: #000;
-    --text-stroke-color: #fff;
-    --button-text-color: #fff;
-    --svg-contour-color: #000;
-    --background-image: 
-        repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
-        repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
-        repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --bold-font-weight: 700;
+  --regular-font-weight: 400;
+  --background-color: #fff;
+  --accent-color: #000;
+  --text-stroke-color: #fff;
+  --button-text-color: #fff;
+  --svg-contour-color: #000;
+  --background-image: 
+      repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bold-font-weight: 785;
-        --regular-font-weight: 465;
-        --background-color: #000;
-        --accent-color: #00CC14;
-        --text-stroke-color: #000;
-        --button-text-color: #00CC14;
-        --svg-contour-color: #00CC14;
-        --background-image: 
-            repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
-            repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
-            repeating-linear-gradient(to bottom, #007f0c, #004306);
-    }
+  :root {
+      --bold-font-weight: 785;
+      --regular-font-weight: 465;
+      --background-color: #000;
+      --accent-color: #00CC14;
+      --text-stroke-color: #000;
+      --button-text-color: #00CC14;
+      --svg-contour-color: #00CC14;
+      --background-image: 
+          repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px),
+          repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
+          repeating-linear-gradient(to bottom, #007f0c, #004306);
+  }
 }

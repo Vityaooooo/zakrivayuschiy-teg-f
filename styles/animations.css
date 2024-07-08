@@ -14,39 +14,39 @@
 */
 
 @keyframes point-move {
-    from {
-      inset-inline-start: -20px;
-    }
-    
-    to {
-      inset-inline-start: -16px;
-    }
+  from {
+    inset-inline-start: -20px;
+  }
+  
+  to {
+    inset-inline-start: -16px;
+  }
 }
 
 @keyframes heart-scale {
-    from {
-        scale: 1;
-    }
+  from {
+    scale: 1;
+  }
+  
+  50% {
+    scale: 1.5;
+  }
     
-    50% {
-        scale: 1.5;
-    }
-    
-    to {
-        scale: 1;
-    }
+  to {
+    scale: 1;
+  }
 }
 
 @keyframes sparks-opacity {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
