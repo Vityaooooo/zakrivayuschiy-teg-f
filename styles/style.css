@@ -383,29 +383,35 @@
 .dialog__content {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .dialog__content .floppy-icon {
   inline-size: 39px;
   block-size: 39px;
+  align-self: center;
 }
 
 .dialog__title {
   font-size: 14px;
   max-inline-size: 198px;
   text-transform: uppercase;
+  font-weight: 400;
   line-height: 1.5;
+}
+
+.dialog__form {
+  max-block-size: 36px;
 }
 
 .dialog__button {
   inline-size: 100%;
-  padding-block: 14px;
+  padding-block: 10px;
   justify-content: center;
 }
 
 .dialog__button .button__text {
   text-transform: uppercase;
+  line-height: .9;
 }
 
 @media (width <= 375px) {
@@ -428,7 +434,7 @@
     inline-size: 310px;
   }
 
-  .floppy-icon {
+  .card__floppy-button .floppy-icon {
     block-size: 28px;
     inline-size: 28px;
   }
@@ -437,6 +443,10 @@
     display: grid;
     inline-size: 341px;
     padding: 30px 42px;
+  }
+
+  .dialog__content {
+    gap: 16px;
   }
 
   .dialog__button {
